@@ -1,0 +1,80 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+ 
+<div class="app-main__inner">
+    <div class="main-card mb-3 card">
+        <div class="card-body">
+            <form action="/add_faq" method="post">
+                <div class="mb-3">
+                    <h3>Add FAQ'S</h3>
+                    <label for="title" class="form-label">Question</label>
+                    <input type="text" class="form-control" id="question" name="question">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Answer/Solution</label>
+                    <input type="text" class="form-control" id="answer" name="answer">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button> 
+            </form>
+        </div>
+      </div>   
+<div class="main-card mb-3 card">
+  <div class="card-body">
+      <table style="width: 100%;" id="stateList" class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+              <th scope="col">SNo.</th>
+              <th scope="col" width="200">Question</th>
+              <th scope="col" width="200">Answer</th>
+              <th scope="col" width="100">Time</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for faq in faqs %}
+              <tr>
+                  <!-- loop.index used to maintain continuity in sno even if an entry is deleted --> 
+                  <th scope="row">{{loop.index}}</th>
+                  <td>{{faq.question}}</td>
+                  <td>{{faq.answer}}</td>
+                  <td>{{faq.date_created}}</td>
+                  <td>
+                      {% if faq.status ==1 %}
+                         <p style="color: green;">Active</p>
+                      {% else %}
+                         <p style="color: red;">Inactive</p>
+                      {% endif %}
+                     
+                  </td>
+                  <td>
+                      
+                        
+                            {% if faq.status == 1 %}
+                                <button class="btn btn-success btn-sm">Active</button>
+                                <a href="{{ url_for('update_faq_status', faq_id=faq.sno, status=0) }}" class="btn btn-danger btn-sm">Inactive</a>
+                            {% else %}
+                                <a href="{{ url_for('update_faq_status', faq_id=faq.sno, status=1) }}" class="btn btn-success btn-sm">Active</a>
+                                <button class="btn btn-danger btn-sm disabled">Inactive</button>
+                            {% endif %}
+                      <a href="/delete/{{faq.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-1">Delete</button>
+                      <a href="/admin/faq/update_faq/{{faq.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-1">Update</button>
+                      <!-- <a href="/view/{{faq.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-0">View</button> -->
+                          
+                      </td>
+                </tr>
+                
+              {% endfor %}
+          
+            
+          </tbody>
+
+      </table>
+  </div>
+</div>
+</div>
+    
+{% endblock %}
+

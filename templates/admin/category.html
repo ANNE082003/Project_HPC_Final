@@ -1,0 +1,72 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+
+ 
+<div class="app-main__inner">
+    <div class="main-card mb-3 card">
+        <div class="card-body">
+          <form action="/add_category" method="POST">
+            <h3> Add Category</h3>
+          <label for="name">Category Name:</label>
+          <input type="text" id="name" name="name" required>   
+
+                    
+                </div>
+                <button type="submit" class="btn btn-primary">Add Category</button>
+            </form>
+        </div>
+      </div>   
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+            <table style="width: 100%;" id="stateList" class="table table-hover table-striped table-bordered">
+              <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col" width="200">Categories</th>
+                    <th scope="col" width="100">Time</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for category in categories %}
+                    <tr>
+                        <!-- loop.index used to maintain continuity in sno even if an entry is deleted --> 
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{category.name}}</td>
+                        
+                        <td>{{category.date_created}}</td>
+                        <td>
+                            {% if category.status ==1 %}
+                               <p style="color: green;">Active</p>
+                            {% else %}
+                               <p style="color: red;">Inactive</p>
+                            {% endif %}
+                           
+                        </td>
+                        <!-- <td>
+                             -->
+                              
+                                  <!-- {% if category.status == 1 %}
+                                      <button class="btn btn-success btn-sm">Active</button>
+                                      <a href="{{ url_for('update_category_status', category_id=category.id, status=0) }}" class="btn btn-danger btn-sm">Inactive</a>
+                                  {% else %}
+                                      <a href="{{ url_for('update_category_status', category_id=category.id, status=1) }}" class="btn btn-success btn-sm">Active</a>
+                                      <button class="btn btn-danger btn-sm disabled">Inactive</button>
+                                  {% endif %}
+                            
+                            </td> -->
+                      </tr>
+                      
+                    {% endfor %}
+                
+                  
+                </tbody>
+      
+            </table>  </div>
+</div>
+</div>
+    
+{% endblock %}
+
+

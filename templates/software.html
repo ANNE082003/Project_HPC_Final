@@ -1,0 +1,75 @@
+{% extends "userlayout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software and Applications</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2><strong>Software and Applications</strong></h2>
+
+    <h3><strong>Computer Center CO Installed Software</strong></h3>
+    <p>There are large numbers of packages that are helpful to all users, but not available from the base system. For these types of packages, CC will compile and install them and make them available via "modules" which can be loaded to add them to your environment. These include things like MPI, compilers, libraries, and other applications. If there is something that you think should be made available to all users in this manner, email cc@tifr.res.in and we can see about installing it for you. To see what is already installed, you can run "module avail" to get a current list.</p>
+
+    <h4><strong>List of Applications</strong></h4>
+    <ul style="list-style-type:disc;">
+        <li><strong>GROMACS</strong> is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.</li>
+        <li><strong>NAMD</strong> is computer software for molecular dynamics simulation.</li>
+        <li><strong>ROOT</strong> analyzing petabytes of data, scientifically. An open-source data analysis framework used by high energy physics and others.</li>
+        <li><strong>MATLAB</strong>: Math Graphics Programming. Whether you're analyzing data, developing algorithms, or creating models. MATLAB is designed for the way you think and the work you do.</li>
+        <li><strong>TensorFlow</strong>: The core open-source library to help you develop and train ML models.</li>
+    </ul>
+    <h4><strong>HPC Software</strong></h4>
+        <ul style="list-style-type:disc;">
+            <li>Red Hat Enterprise Linux Server release 7.4</li>
+            <li>Ganglia monitoring tool</li>
+            <li>Oracle Management tool</li>
+            <li>POSH tool</li>
+            <li>Lustre file system</li>
+            <li>PBSPro scheduler(free version)</li>
+            <li>Powerchute network shutdown</li>
+        </ul>
+        <strong>List of compilers</strong>
+        <ul style="list-style-type:disc;">
+            <li>GCC project C and C++ compiler</li>
+            <li>Intel (Student limited version)</li>
+            <li>Nvidia CUDA Compiler (NVCC)</li>
+        </ul>
+        <strong>List of Scientific software</strong>
+        <ul style="list-style-type:disc;">
+            <li>Gromacs</li>
+            <li>NAMD</li>  
+            <li>TensorFlow</li>
+            <li>CUDA</li>
+            <li>Wannier tool</li>
+            <li>Julia</li>
+            <li>Guassian</li>
+            <li>Turbomole</li>
+            <li>Root-Cern</li>
+            <li>Matlab</li>
+        </ul>
+    </ul>
+</body>
+</html>
+
+{% endblock %}
+  

@@ -1,0 +1,410 @@
+{
+    "intents": [
+      {
+        "tag": "Greeting",
+        "patterns": [
+          "Hi",
+          "Hii",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Hi Chatbot",
+          "Hello Chatbot",
+          "Good day",
+          "What's up",
+          "What is up",
+          "Howdy",
+          "Hey",
+          "Hey there",
+          "Hello there",
+          "Hi there",
+          "Good to see you"
+        ],
+        "responses": [
+          "Hello, thanks for visiting",
+          "Hi there, how can I help?",
+          "Hi there, what can I do for you?",
+          "Hello, how are you today?",
+          "Hi, how can I help you?",
+         
+          "Hello, I'm glad you are here. How can I help you?",
+          "Hi there, what brings you here today?"
+          
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Greeting2",
+        "patterns": [
+          "How are you?",
+          "How are you doing?",
+          "How are things?",
+          "How's it going?",
+          "How's life?",
+          "How's your day going?",
+          "How's your day?"
+        ],
+        "responses": [
+          "I'm doing great. Thanks for asking.",
+          "I'm doing fine. How about you?"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Morning",
+        "patterns": ["Good morning", "Morning", "Morning Chatbot"],
+        "responses": [
+          "Good morning. I hope you had a good night's sleep. How are you feeling today?"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Afternoon",
+        "patterns": ["Good afternoon", "Afternoon", "Afternoon Chatbot"],
+        "responses": ["Good afternoon. How is your day going?"],
+        "context_set": ""
+      },
+      {
+        "tag": "Evening",
+        "patterns": ["Good evening", "Evening", "Evening Chatbot"],
+        "responses": ["Good evening. How has your day been?"],
+        "context_set": ""
+      },
+      {
+        "tag": "Night",
+        "patterns": ["Good night", "Night", "Night Chatbot"],
+        "responses": [
+          "Good night. Get some proper sleep",
+          "Good night. Sweet dreams."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Haha",
+        "patterns": ["Haha"],
+        "responses": ["Haha", "Glad you are laughing :)"],
+        "context_set": ""
+      },
+      {
+        "tag": "Goodbye",
+        "patterns": [
+          "Bye.",
+          "Bye Bye.",
+          "See you later.",
+          "Goodbye.",
+          "I am leaving.",
+          "Have a good day.",
+          "Have a nice day.",
+          "Ok bye.",
+          "Bye then.",
+          "Fare thee well.",
+          "Farewell.",
+          "Thanks, bye."
+        ],
+        "responses": [
+          "See you later.",
+          "Have a nice day.",
+          "Bye! Come back again.",
+          "I'll see you soon.",
+          "Bye. It was nice talking to you.",
+          "Goodbye! Take care.",
+          "See you later! Have a great day.",
+          "See you soon.",
+          "No problem, see you later.",
+          "Take care of yourself.",
+          "Thanks for using my services!",
+          "Always here to help!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Thanks",
+        "patterns": [
+          "Thanks",
+          "Thank you",
+          "That's helpful",
+          "Thanks for the help",
+          "I an grateful to have you around",
+          "Thank you very much",
+          "I can't tell you how thankful I am for you"
+        ],
+        "responses": [
+          "Happy to help!",
+          "Any time!",
+          "My pleasure",
+          "You're most welcome!",
+          "No problem!",
+          "Glad I could help!",
+          "I'm humbled",
+          "I feel good talking to you too",
+          "No worries!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Name",
+        "patterns": [
+          "Who are you?",
+          "What are you?",
+          "Who you are?",
+          "Tell me more about yourself.",
+          "What is your name?",
+          "What should I call you?",
+          "What's your name?",
+          "Tell me about yourself",
+          "Chatbot name",
+          "Your name"
+        ],
+        "responses": [
+          "Hah, thanks for asking, I am a Support Chatbot designed to address FAQs related to HPC",
+          "I'm your Personal  Chatbot/Assistance and My name is Sam. How are you feeling today?"
+          
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Purpose",
+        "patterns": [
+          "What is the purpose of you?",
+          "What do you do?",
+          "What can you do?",
+          "What do you offer?",
+          "What is your purpose?"
+        ],
+        "responses": [
+          "I can provide u with support for FAQs related to HPC."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Username",
+        "patterns": ["My name is ", "I am name ", "I go by "],
+        "responses": [
+          "Oh nice to meet you. Tell me how was your week?",
+          "Nice to meet you. So tell me. How do you feel today?",
+          "That's a great name. Tell me more about yourself."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Help",
+        "patterns": [
+          "Could you help me?",
+          "Give me a hand please",
+          "Can you help?",
+          "I need support",
+          "I need help",
+          "Support me please"
+        ],
+        "responses": [
+          "Sure. Tell me how can i assist you",
+          "Tell me your problem so that i can assist you",
+          "Yes, sure. How can I help you?"
+        ],
+        "context_set": ""
+      },
+  
+      
+      {
+        "tag": "Repeat",
+        "patterns": [
+          "You already told me that",
+          "You mentioned that already",
+          "Why are you repeating yourself?",
+          "Repeated"
+        ],
+        "responses": [
+          "Oh sorry I didn't realise that. I'll try not to repeat myself again."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Wrong",
+        "patterns": [
+          "What are you saying?",
+          "That doesn't make sense",
+          "Wrong response",
+          "Wrong answer",
+          "Wrong"
+        ],
+        "responses": ["I'm very sorry. Let's try that again"],
+        "context_set": ""
+      },
+      {
+        "tag": "Right",
+        "patterns": [
+          "You are right",
+          "Correct answer",
+          "Correct response",
+          "Correct"
+        ],
+        "responses": ["I'm glad that I could help."],
+        "context_set": ""
+      },
+      {
+        "tag": "Disagree",
+        "patterns": ["I disagree", "Disagree"],
+        "responses": ["Why is that?"],
+        "context_set": ""
+      },
+      {
+        "tag": "Agree",
+        "patterns": ["I agree", "Agree"],
+        "responses": ["Cool :)", "Nice, glad you agreed"],
+        "context_set": ""
+      },
+      {
+        "tag": "Neutral",
+        "patterns": ["Okay", "OK", "Alright"],
+        "responses": ["Okay!", "Alright", "Alrighty"],
+        "context_set": ""
+      },
+      {
+        "tag": "login_hpc_server",
+        "patterns": [
+            "How to login to the HPC server?",
+            "Can you tell me how to access the HPC server?",
+            "What are the steps to login into the HPC server?",
+            "How do I access HPC from Linux?",
+            "How do I access HPC from Windows?"
+        ],
+        "responses": [
+            "To login to the HPC server, follow these steps: \nFrom Linux:\n1. Open terminal.\n2. Use ssh username@cchpc19.tifr.res.in (e.g., ssh anilkumar@cchpc19.tifr.res.in).\n3. Enter your LDAP login credentials.\n\nFrom Windows:\n1. Open Putty client.\n2. Enter host as 'cchpc19.tifr.res.in'.\n3. Enter your LDAP login credentials."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "pbs",
+        "patterns": [
+            "What is PBS?",
+            "Explain PBS.",
+            "Tell me about the PBS system.",
+            "What does PBS do?",
+            "PBS system definition."
+        ],
+        "responses": [
+            "PBS is a job management system that allows users to run more jobs in less time by matching the job processing needs with available resources. It schedules jobs, and provides functions for building, submitting, and processing jobs quickly and efficiently in a dynamic environment."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "check_job_queue",
+        "patterns": [
+            "How to check job queue?",
+            "How do I see the job queue in PBS?",
+            "Can I check the queue of jobs?",
+            "How to display PBS job queue?",
+            "How do I check job status?"
+        ],
+        "responses": [
+            "A job queue is a list of jobs waiting to be processed. You can check the PBS job queue by entering: \n`qstat` to display the queue or \n`qsub job1.sh` to submit a sample job."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "login_node_restrictions",
+        "patterns": [
+            "What are the restrictions of login nodes?",
+            "Can I use login nodes for compute tasks?",
+            "What is the login node used for?",
+            "What are login node limitations?"
+        ],
+        "responses": [
+            "The login nodes are for compiling software and submitting jobs. Users should avoid running compute-intensive processes on login nodes as this affects other users. All jobs should be submitted to the queue."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "clean_gaussian_scratch",
+        "patterns": [
+            "How to clean Gaussian scratch space?",
+            "How do I clean the Gaussian space?",
+            "Tell me how to clean Gaussian files.",
+            "Delete Gaussian scratch files."
+        ],
+        "responses": [
+            "To clean the Gaussian scratch space, follow these steps:\n1. Check if files exist with: `ls $GAUSS_SCRDIR`.\n2. Delete unwanted files by using: `rm $GAUSS_SCRDIR/Gau-*`.\nIt's recommended to regularly clean the scratch space to avoid job terminations."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "request_hpc_account",
+        "patterns": [
+            "How to request an HPC account?",
+            "How do I get an HPC account?",
+            "What is the process to request a user account on HPC?",
+            "HPC account request."
+        ],
+        "responses": [
+            "TIFR members can request an HPC account by contacting the appropriate authorities within the organization."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "run_gaussian_unfchk",
+        "patterns": [
+            "How to run Gaussian 'unfchk' command at the cluster?",
+            "What are the steps to run Gaussian unfchk?",
+            "Explain running Gaussian unfchk.",
+            "Run Gaussian unfchk command."
+        ],
+        "responses": [
+            "To run Gaussian 'unfchk' at the cluster:\n1. Login to your HPC account.\n2. Use the commands: \n```\nexport g09root=/home/apps/gaussian/intel/g09verD01\nexport GAUSS_SCRDIR=/scratch/your_userid\n. $g09root/g09/bsd/g09.profile\n```\n3. Run: `unfchk abc.fchk`."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "run_gaussian_formchk",
+        "patterns": [
+            "How to run Gaussian 'formchk' command at the cluster?",
+            "What are the steps to run Gaussian formchk?",
+            "Explain running Gaussian formchk.",
+            "Run Gaussian formchk command."
+        ],
+        "responses": [
+            "To run Gaussian 'formchk' at the cluster:\n1. Login to your HPC account.\n2. Use the commands: \n```\nexport g09root=/home/apps/gaussian/intel/g09verD01\nexport GAUSS_SCRDIR=/scratch/your_userid\n. $g09root/g09/bsd/g09.profile\n```\n3. Run: `formchk -3 abc.chk` to generate abc.fchk."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "matlab_benefits",
+        "patterns": [
+            "What are the benefits of running MATLAB at CCHPC19?",
+            "Why should I run MATLAB on CCHPC19?",
+            "Tell me about running MATLAB on the cluster."
+        ],
+        "responses": [
+            "Benefits of running MATLAB on CCHPC19:\n1. Access reliability - Executables never fail due to license issues.\n2. Parallel applications - Run multiple tasks concurrently.\n3. Protect intellectual property by hiding source code.\n4. Multiple MATLAB versions can coexist."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "get_support",
+        "patterns": [
+            "How to get service and technical support?",
+            "Where can I ask for help with HPC?",
+            "Who do I contact for technical support?",
+            "How do I get help with HPC issues?"
+        ],
+        "responses": [
+            "For service and technical support:\n1. Send an email to cc@tifr.res.in or call 2121.\n2. For a quicker response, it's better to email hpcug@ccweb.tifr.res.in, as it contacts both staff and users."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "pbs_job_status",
+        "patterns": [
+            "How to check PBS Queue and Job status?",
+            "What are the PBS job status commands?",
+            "How to list all jobs in PBS?",
+            "How do I check the status of my job?"
+        ],
+        "responses": [
+            "Check PBS Queue and Job Status using the following commands:\n- `qstat -q`: List all queues.\n- `qstat -a`: List all jobs.\n- `qstat -au <userid>`: List jobs for a specific user.\n- `qstat -r`: List running jobs.\n- `qstat -f <job_id>`: Full info about a job."
+        ],
+        "context_set": ""
+    }
+    
+        ]
+  }
+  
